@@ -227,6 +227,15 @@ li {
   background-color: #fff;
   color: #000;
 }
+.orange_dark_btn{
+   color: #000;
+  border: 1px solid #000;
+  background-color: #f9ad4a;
+} 
+.orange_dark_btn:hover{
+  background-color: #fff;
+  color: #000;
+} 
 
 .text_section h2 {
   font-size: 30px;
@@ -496,7 +505,7 @@ label {
   display: block;
 }
 #message {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 .form-bottom input[type="submit"] {
   background-color: #f9ad4a;
@@ -597,6 +606,10 @@ footer {
   padding: 10px;
   font-weight: 500;
 }
+.openbtn,
+.closebtn {
+  display: none;
+}
 /*------ serrurier ----------*/
 
 .serrur {
@@ -651,7 +664,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 30px;
-
 }
 .content-rideu div {
   height: 70vh;
@@ -666,31 +678,33 @@ footer {
   margin: 0 30px;
 }
 
-.row-content img{
+.row-content img {
   width: 600px;
   height: 400px;
 }
 .content-rideu p {
   margin: 40px 10px;
 }
-.content-rideu p span{
+.content-rideu p span {
   font-weight: bold;
 }
 /* Responsive */
-@media screen and (max-width: 1653px) {
-  body{
-    transition: margin-left .5s;
+@media screen and (max-width: 1023px) {
+  body {
+    transition: margin-left 0.5s;
   }
-  section{
+  section {
     padding: 20px;
   }
-  .home{
+  .home {
     min-height: 50vh;
+    margin: 0;
   }
-  .logo{
-    font-size: 30px;
+  .logo {
+    width: 210px;
+    height: 50px;
   }
-  .home_page_content{
+  .home_page_content {
     margin-top: 150px;
     position: unset;
     width: 100%;
@@ -699,11 +713,12 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-   .home_page_content .title{
-  font-size: 30px;
-  line-height: 50px;
+  .home_page_content .title {
+    font-size: 25px;
+    line-height: 50px;
   }
-  .image_box{
+
+  .image_box {
     margin-top: 50px;
     position: unset;
     width: 100%;
@@ -713,34 +728,36 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
-  .image_box img{
-    width: 500px;
+  .image_box img {
+    width: 400px;
   }
-  .openbtn, .closebtn{
+  /* boutton*/
+  .openbtn,
+  .closebtn {
     padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: #f9ad4a;
     border: 0;
     color: #000;
     outline: none;
     font-weight: bold;
     letter-spacing: 2px;
   }
-  .closebtn{
+  .closebtn {
     display: unset;
     position: absolute;
     top: 28px;
     right: 25px;
   }
-
-  .links{
+  /* navbar */
+  .links {
     background-color: #1a1a1a;
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 0%;
     position: absolute;
     overflow: hidden;
     flex-direction: column;
@@ -754,5 +771,114 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  /* section text */
+  .text_section {
+    margin: 0;
+  }
+  .text_section p {
+    font-size: 90px;
+  }
+  .text_section h2 {
+    font-size: 20px;
+  }
+  .owner {
+    flex-direction: column;
+    height: fit-content;
+    margin: 20px 0;
+  }
+  .image_box_owner,
+  .content_box {
+    display: flex;
+    flex-direction: column;
+  }
+  .image_box_owner p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .content_box {
+    margin-top: 40px;
+    height: fit-content;
+  }
+  .background {
+    margin: 40px 0;
+    height: fit-content;
+    background: url(image/background-pose-rideau-metallique.jpg);
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .background .image {
+    display: none;
+  }
+  .background .text-box {
+    position: unset;
+  }
+  .text-box {
+    padding: 20px;
+    height: 80%;
+    width: 80%;
+  }
+  .orange_dark_btn{
+  font-size: 14px;
+  padding: 13px;
+} 
+  .big p {
+    display: none;
+  }
+  /* services */
+  .services {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .services .box {
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  /* contact */
+  .contact {
+    flex-direction: column;
+  }
+  .left,
+  .right {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .left h2 {
+    font-size: 30px;
+  }
+  .left .text {
+    font-size: 13px;
+  }
+  .phone-contact {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .phone-contact i {
+    font-size: 25px;
+  }
+  .phone-contact a {
+    font-size: 18px;
+  }
+  .right h2 {
+    font-size: 20px;
+  }
+  label {
+    font-size: 16px;
+  }
+  .form-top {
+    flex-direction: column;
+  }
+  /* footer */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
