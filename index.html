@@ -15,9 +15,9 @@
     <section class="home">
       <div class="menu">
         <img src="image/logo.png" alt="image logo" class="logo" />
-        <button class="openbtn">open</button>
+        <button class="openbtn" onclick="openNav()">open</button>
         <ul class="links">
-          <button class="closebtn">close</button>
+          <button class="closebtn" onclick="closeNav()">close</button>
           <li><a href="#">Accueil</a></li>
           <li><a href="pages/serrurier.html">Serrurerie</a></li>
           <li><a href="#">Rideau Métalique</a></li>
@@ -33,7 +33,9 @@
       <div class="home_page_content">
         <span>
           <img src="image/log-icon.webp" alt="logo" class="img_icon" />
-          <p>RIDEAUX MÉTALIQUES, SERRURERIE, VOLETS ROULANTS, VITRERIE,</p>
+          <p class="text">
+            RIDEAUX MÉTALIQUES, SERRURERIE, VOLETS ROULANTS, VITRERIE,
+          </p>
         </span>
         <h1 class="title">
           DÉPANNAGE SERRURIE 24/24<br />
@@ -114,10 +116,10 @@
         <span>Notre récent</span>
         <h3>Depannplus75</h3>
         <p>Vous souhaite la bienvenue dans ses projets.</p>
+        <!--<h6><i class="fa-solid fa-circle"></i></h6>
         <h6><i class="fa-solid fa-circle"></i></h6>
-        <h6><i class="fa-solid fa-circle"></i></h6>
-        <h6><i class="fa-solid fa-circle"></i></h6>
-        <button class="white_btn dark_btn">
+        <h6><i class="fa-solid fa-circle"></i></h6>-->
+        <button class="white_btn orange_dark_btn">
           Voir tous les Projets <i class="fa-solid fa-angle-right"></i>
         </button>
       </div>
@@ -185,7 +187,7 @@
           <i class="fa-solid fa-phone-volume"></i>
           <div class="bloc-contact">
             <a href="tel:+33 6 20 15 26 15"> +33 6 20 15 26 15</a>
-            <p>
+            <p class="text">
               Nous sommes à votre écoute pour vous conseiller efficacement selon
               votre urgence dépannage
             </p>
@@ -194,7 +196,7 @@
       </div>
 
       <div class="right">
-        <h2 class="title-category">Contact</h2>
+        <h2 class="title-category">Devis/Contact</h2>
         <div class="form-contact-container">
           <form action="" method="" class="form-contact">
             <div class="form-top">
