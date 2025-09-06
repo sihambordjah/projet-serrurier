@@ -1,3 +1,4 @@
+/*
 const form = document.querySelector("form");
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
@@ -19,7 +20,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   sendEmail();
 });
-/**animation de formulaire */
+/**animation de formulaire *//*
 window.addEventListener("DOMContentLoaded", (event) => {
   inputs = document.querySelectorAll(
     'input:not(input[type="submit"]), textarea'
@@ -42,4 +43,24 @@ function openNav() {
 function closeNav() {
   document.querySelector(".links").style.width = "0%";
   document.querySelector("body").style.overflow = "unset";
-}
+}*/
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault(); // empêche le rechargement de la page
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      body: data,
+    })
+      .then(() => {
+        document.getElementById("confirmation").style.display = "block";
+        form.reset(); // vide le formulaire
+      })
+      .catch((error) => alert("❌ Une erreur est survenue : " + error));
+  });
+
