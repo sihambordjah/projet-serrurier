@@ -57,8 +57,8 @@
       <div class="image_box">
         <img src="image/rideau-metallique.jpg" alt="image_box" />
         <p>
-          <i class="fa-solid fa-location-dot"></i> 121 boulevard bessiere,
-          75017 paris
+          <i class="fa-solid fa-location-dot"></i> 121 boulevard bessiere, 75017
+          paris
         </p>
       </div>
     </section>
@@ -84,8 +84,8 @@
       <div class="image_box_owner">
         <img src="image/Entreprise.jpg" alt="image3" />
         <p>
-          <i class="fa-solid fa-location-dot"></i> 121 boulevard bessiere,
-          75017 paris
+          <i class="fa-solid fa-location-dot"></i> 121 boulevard bessiere, 75017
+          paris
         </p>
       </div>
       <div class="content_box">
@@ -246,21 +246,29 @@
             </div>
           </form>-->
 
-          <form name="contact" method="POST" data-netlify="true" id="contact-form">
+          <form name="contact" method="POST" data-netlify="true">
+  <!-- Champ caché obligatoire pour Netlify -->
   <input type="hidden" name="form-name" value="contact">
-  <input type="text" name="nom" placeholder="Votre nom" required>
-  <input type="email" name="email" placeholder="Votre email" required>
-  <textarea name="message" placeholder="Votre message" required></textarea>
+
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+  <label for="email">Email :</label>
+  <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+  <label for="message">Message :</label>
+  <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
   <button type="submit">Envoyer</button>
 </form>
 
-<p id="confirmation" style="display:none; color:green;">✅ Merci, votre message a bien été envoyé !</p>
+
+          <p id="confirmation" style="display: none; color: green">
+            ✅ Merci, votre message a bien été envoyé !
+          </p>
         </div>
       </div>
     </section>
-
-
-
 
     <!--footer-->
     <footer>
