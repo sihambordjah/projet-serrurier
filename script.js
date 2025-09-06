@@ -9,8 +9,8 @@ function sendEmail() {
     Host: "smtp.elasticemail.com",
     Username: "contact@depannage-serrurier-saintdenis.fr",
     Password: "EB0FE8E1714FEC2341EF657F088BDFD67D28",
-    To: "sihamsissa1903@gmail.com",
-    From: "sihamsissa1903@gmail.com",
+    To: "contact@depannage-serrurier-saintdenis.fr",
+    From: "contact@depannage-serrurier-saintdenis.fr",
     Subject: "This is the subject",
     Body: bodyMessage,
   }).then((message) => alert(message));
@@ -37,10 +37,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 function openNav() {
   document.querySelector(".links").style.width = "100%";
-  document.querySelector("body").style.overflow ="hidden"
+  document.querySelector("body").style.overflow = "hidden";
 }
 function closeNav() {
   document.querySelector(".links").style.width = "0%";
   document.querySelector("body").style.overflow = "unset";
 }
-
