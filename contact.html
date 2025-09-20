@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Depann93</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/56f636a24d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--home-->
+    <section id="home-margin-botom" class="home">
+      <div class="menu">
+        <img src="image/logo-depanplus93.png" alt="image logo" class="logo" />
+        <button class="openbtn" onclick="openNav()">open</button>
+        <ul class="links">
+          <button class="closebtn" onclick="closeNav()">close</button>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="../services/index.html">Nos Services</a></li>
+          <li><a href="../projet.html">Nos Projets</a></li>
+          <li><a href="contact.html">Devis/Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- home_page_content -->
+
+      <div class="title-contact">
+        <h1>CONTACT</h1>
+        <p>Une équipe réactive à votre disposition</p>
+      </div>
+    </section>
+
+    <!--  contact section -->
+    <section id="contact" class="contact">
+      <div class="left">
+        <h2 class="big_title">NOS DÉPANNEURS À VOTRE SERVICE</h2>
+
+        <p class="text">
+          Vous avez une question concernant notre agence, vous souhaitez être
+          accompagné ? Nos experts vous répondent en 24 heures.
+        </p>
+        <div class="phone-contact">
+          <div class="bloc-contact">
+            <i class="fa-solid fa-phone-volume"></i>
+            <a href="tel:+33 6 xx xx xx xx"> +33 6 xx xx xx xx</a>
+            <p class="text">Appelez-nous !</p>
+          </div>
+          <div class="bloc-contact">
+            <p>
+              <i class="fa fa-envelope" aria-hidden="true"></i
+              >contact@depannage-serrurier-saintdenis.fr
+            </p>
+            <p class="text">Ecrivez-nous un email !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2 class="title-category">Devis/Contact</h2>
+        <div class="form-contact-container">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            id="contact-form"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="text" name="nom" placeholder="Votre nom" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Votre email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Votre message"
+              required
+            ></textarea>
+            <button type="submit">Envoyer</button>
+          </form>
+
+          <p id="confirmation" style="display: none; color: green">
+            ✅ Merci, votre message a bien été envoyé !
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="contact-image">
+      <img src="image/contact-redimensioner.jpg" alt="" />
+    </section>
+
+    <!--footer-->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3>🔑 Depann93</h3>
+          <p>
+            Besoin d'un dépannage de serrurerie a Saint-Denis ? Contactez
+            Dépanna93 !
+          </p>
+        </div>
+
+        <div class="footer-content">
+          <h3>Contactez-nous</h3>
+          <p>Email: contact@depannage-serrurier-saintdenis.fr</p>
+          <p>Mobile: +33 6 60 xx xx xx</p>
+          <p>Fixe: +33 1 30 xx x xx</p>
+          <p>Adress: 121 boulevard bessiere 75017 Paris</p>
+        </div>
+        <div class="footer-content">
+          <h3>Nos Services</h3>
+          <ul class="list">
+            <li>
+              <a href="services/ouverture-de-porte.html"></a>Ouverture de porte
+            </li>
+            <li>
+              <a href="services/remplacement-serrure.html"></a>Remplacement de
+              serrure
+            </li>
+            <li>
+              <a href="services/solutions-de-securisation.html"></a>Solutions de
+              sécurisation
+            </li>
+            <li><a href="services/vitrerie.html"></a>Vitrerie</li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Suivez-nous</h3>
+          <ul class="social-icons">
+            <li><a href=""></a><i class="fa-brands fa-facebook"></i></li>
+            <li><a href=""></a><i class="fa-brands fa-instagram"></i></li>
+            <li><a href=""></a><i class="fa-brands fa-linkedin"></i></li>
+            <li><a href=""></a><i class="fa-brands fa-youtube"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>Copyright© 2025 • DEPANN93</p>
+      </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
