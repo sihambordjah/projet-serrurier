@@ -6,6 +6,12 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+/* === Correctifs responsive ajoutés === */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 body {
   background-color: #f5f5f5;
@@ -18,6 +24,11 @@ ul {
 }
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 button,
 li {
@@ -665,44 +676,33 @@ footer {
 #home-margin-botom {
   margin-bottom: 20px;
 }
-
-/*------ page serrurier ----------*/
+/*------ page services/index.html ----------*/
+/*------ section services/serrurier ----------*/
 .serrur {
   display: flex;
   flex-direction: row-reverse;
 }
-
+/*--  modele serrurerier section --*/
+/*------ section services/nos serrures ----------*/
 .row-section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur PC */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
-.big-serr-section {
-  margin: 200px 0;
-  margin-bottom: 50px;
+.row-section .image-model {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
-.big-serr-section h2 {
-  font-size: 80px;
+.row-section .image-model:hover {
+  transform: translateY(-5px);
 }
-.image-model {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-}
-.img-margin {
-  background-color: #fbfffd;
-  box-shadow: 0 32px 80px -32px rgba(0, 0, 0.24);
-  border-radius: 6px;
-  width: 33.33%;
-  margin: 0 20px;
-
-  align-items: center;
-  justify-content: center;
-}
-.img-margin img {
+.image-model img {
   width: 270px;
   height: 270px;
   object-fit: cover;
@@ -772,9 +772,11 @@ footer {
   width: 45%;
   height: 500px;
 }
+/*
 .content_box {
   width: 50%;
 }
+*/
 
 .small_title {
   font-size: 32px;
@@ -875,7 +877,7 @@ footer {
   .image_box img {
     width: 400px;
   }
-  /* boutton*/
+  /* boutton menu humburger*/
   .openbtn,
   .closebtn {
     padding: 10px 30px;
@@ -931,40 +933,24 @@ footer {
     height: fit-content;
     margin: 0;
   }
+  .image_box_owner {
+    margin-bottom: 30px;
+  }
 
-  /*
-  .content_box {
-    display: flex;
-    flex-direction: column;
+  .content_box .big_title {
+    font-size: 22px;
   }
-  .image_box_owner p {
-    margin-bottom: 20px;
-    text-align: center;
-  }*/
-  .content_box {
-    margin-top: 40px;
-  }
+  /*---background-------*/
   .background {
-    margin: 40px 0;
-    height: fit-content;
-    background: url(image/background-pose-rideau-metallique.jpg);
-    padding: 20px;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 50vh; /* moins haut sur mobile */
+    margin-bottom: 170px; /* réduit l’espace en bas */
   }
-  .background .image {
-    display: none;
+  .background img {
+    object-fit: cover; /* garde le cadrage */
   }
-  .background .text-box {
-    position: unset;
-  }
-  .text-box {
-    padding: 20px;
-    height: 80%;
-    width: 80%;
+
+  .background img {
+    object-fit: cover; /* garde le cadrage */
   }
   .orange_dark_btn {
     font-size: 14px;
@@ -976,17 +962,10 @@ footer {
   .services-container {
     grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
   }
-  /* services 
-  .services {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+  /*--  modele serrurerier section --*/
+  .row-section {
+    grid-template-columns: repeat(2, 1fr); /* ✅ Tablette : 2 colonnes */
   }
-  .services .box {
-    margin-bottom: 30px;
-    width: 80%;
-  }*/
 
   /* contact */
   .contact {
@@ -1030,17 +1009,7 @@ footer {
     justify-content: center;
   }
 }
-/* === Correctifs responsive ajoutés === */
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 @media screen and (max-width: 768px) {
   .image_box img {
     width: 100%;
@@ -1058,5 +1027,22 @@ img {
   .owner .content_box {
     max-width: 100%; /* occupe toute la largeur */
     padding: 10px; /* un peu d’air autour */
+  }
+  /*--  modele serrurerier section --*/
+  .row-section {
+    grid-template-columns: 1fr; /* ✅ Mobile : 1 colonne */
+  }
+  /*--  homme page section les botton section --*/
+  .flex-button {
+    flex-direction: column; /* ✅ Mobile : 1 colonne */
+  }
+  .background {
+    height: 50vh; /* encore plus compact sur petit mobile */
+    margin-bottom: 60px;
+  }
+  .background .text-box {
+    align-items: center;
+    max-width: 300px;
+    height: auto;
   }
 }
