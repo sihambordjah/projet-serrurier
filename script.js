@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   sendEmail();
 });
-/**animation de formulaire *//*
+/**animation de formulaire */ /*
 window.addEventListener("DOMContentLoaded", (event) => {
   inputs = document.querySelectorAll(
     'input:not(input[type="submit"]), textarea'
@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 });
-
+*/
 function openNav() {
   document.querySelector(".links").style.width = "100%";
   document.querySelector("body").style.overflow = "hidden";
@@ -43,7 +43,7 @@ function openNav() {
 function closeNav() {
   document.querySelector(".links").style.width = "0%";
   document.querySelector("body").style.overflow = "unset";
-}*/
+}
 
 document
   .getElementById("contact-form")
@@ -63,4 +63,3 @@ document
       })
       .catch((error) => alert("❌ Une erreur est survenue : " + error));
   });
-
