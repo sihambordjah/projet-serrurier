@@ -655,6 +655,9 @@ footer {
   padding: 10px;
   font-weight: 500;
 }
+.visually-hidden{
+  visibility: hidden;
+}
 .openbtn,
 .closebtn {
   display: none;
