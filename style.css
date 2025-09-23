@@ -34,6 +34,10 @@ button,
 li {
   cursor: pointer;
 }
+.openbtn,
+.closebtn {
+  display: none;
+}
 
 /*---- home section ------*/
 .home {
@@ -66,7 +70,7 @@ li {
   margin: 20px;
 }
 
-/*--------menu deroulant-----------*/
+/*--------menu Navigation-----------*/
 .links li ul {
   position: absolute;
 }
@@ -76,8 +80,6 @@ li {
 .links li:hover ul {
   display: block;
 }
-/*---------fin menu deroulant------------*/
-
 .links li a {
   color: #ffff;
   position: relative;
@@ -129,7 +131,7 @@ li {
   color: #f9ad4a;
   line-height: 20px;
 }
-
+/*-----le Botton----*/
 .white_btn {
   background-color: transparent;
   border: 1px solid #fff;
@@ -442,10 +444,10 @@ li {
 
 /*-------- contact section --------*/
 .contact {
-  margin: 120px 0;
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  margin: 120px 0;
+  width: 100%;
 }
 .left,
 .right {
@@ -474,19 +476,18 @@ li {
   margin-top: 10px;
   margin-left: 60px;
 }
-.title-contact {
-  display: inline-block;
-
-  text-align: center;
-  width: 100%;
-  margin-top: 12%;
+.home_page-title-contact {
+  display:flex;
+  flex-direction: column;
+ align-items: center;
+padding-top: 100px;
 }
-.title-contact h1 {
+.home_page-title-contact h1 {
   color: #fff;
   font-size: 3rem;
   margin-bottom: 15px;
 }
-.title-contact p {
+.home_page-title-contact p {
   color: #fff;
   font-size: 1rem;
 }
@@ -655,13 +656,10 @@ footer {
   padding: 10px;
   font-weight: 500;
 }
-.visually-hidden{
+.visually-hidden {
   visibility: hidden;
 }
-.openbtn,
-.closebtn {
-  display: none;
-}
+
 /*----- tous les pages ----------*/
 /*----- page service -------*/
 .flex-button {
@@ -911,7 +909,7 @@ footer {
   /* navbar */
   .links {
     background-color: #1a1a1a;
-    height: 50%;
+    height: 100%;
     width: 0%;
     position: absolute;
     overflow: hidden;
@@ -1025,6 +1023,7 @@ footer {
     height: 50px;
     margin-left: 10px;
   }
+
   .image_box img {
     width: 100%;
     height: auto;
