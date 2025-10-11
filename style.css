@@ -1067,6 +1067,7 @@ footer {
    
   }
   .background .text-box {
+    right: 10%;
     align-items: center;
     max-width: 300px;
     height: auto;
