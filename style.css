@@ -362,7 +362,7 @@ li {
   right: 15%;
   bottom: -100px;
   z-index: 10;
-  width: 450px;
+  max-width: 450px;
   background-color: #fff;
   box-shadow: 0 32px 80px -32px rgba(0, 0, 0.24);
   padding: 45px;
@@ -378,10 +378,6 @@ li {
 }
 .text-box p {
   margin-bottom: 25px;
-}
-.text-box h6 {
-  font-size: 14px;
-  margin: 15px 0;
 }
 .text-box i {
   margin-right: 10px;
@@ -1064,24 +1060,19 @@ footer {
   }
   .background {
     height: 50vh; /* encore plus compact sur petit mobile */
-   
   }
   .background .text-box {
     right: 10%;
     align-items: center;
     max-width: 300px;
-    height: auto;
+    height: 95%;
   }
- 
-.text-box h3 {
-  font-size: 25px;
-}
-.text-box .white_btn {
-  font-size: 12px;
-}
-.text-box button {
-  margin-top: 15px;
-}
+  .text-box h3 {
+    font-size: 25px;
+  }
+  .text-box .white_btn {
+    font-size: 12px;
+  }
   .footer-content {
     text-align: center;
     width: 100%; /* 1 seule colonne */
